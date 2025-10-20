@@ -13,7 +13,7 @@ import random
 class Person(Scraper):
 
     __TOP_CARD = "main"
-    __WAIT_FOR_ELEMENT_TIMEOUT = 5
+    __WAIT_FOR_ELEMENT_TIMEOUT = 10
 
     def __init__(
         self,

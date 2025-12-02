@@ -75,7 +75,7 @@ class Scraper:
 
     def mouse_click(self, elem):
         action = webdriver.ActionChains(self.driver)
-        action.move_to_element(elem).perform()
+        action.move_to_element(elem).click().perform()
 
     def wait_for_element_to_load(self, by=By.CLASS_NAME, name="pv-top-card", base=None):
         base = base or self.driver

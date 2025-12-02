@@ -109,14 +109,14 @@ class Person(Scraper):
             return False
 
     def get_experiences(self):
-        try:
-            see_all_experiences_btn = self.driver.find_element(
-                By.ID, "navigation-index-see-all-experiences"
-            )
-            self.mouse_click(see_all_experiences_btn)
-        except:
-            url = os.path.join(self.linkedin_url, "details/experience")
-            self.driver.get(url)
+        # try:
+        #     see_all_experiences_btn = self.driver.find_element(
+        #         By.ID, "navigation-index-see-all-experiences"
+        #     )
+        #     self.mouse_click(see_all_experiences_btn)
+        # except:
+        url = os.path.join(self.linkedin_url, "details/experience")
+        self.driver.get(url)
         self.focus()
         main = self.wait_for_element_to_load(by=By.TAG_NAME, name="main")
         self.scroll_to_half()
